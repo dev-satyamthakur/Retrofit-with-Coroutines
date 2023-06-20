@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupRecyclerView()
+
         lifecycleScope.launch launchWhenCreated@{
             binding.progressBar.isVisible = true
             val response = try {
